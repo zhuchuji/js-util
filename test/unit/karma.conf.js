@@ -7,11 +7,11 @@ module.exports = function (config) {
       'spec/**/*.spec.js'
     ],
     preprocessors: {
-      '../../src/**/*.js': ['webpack'],
-      'spec/**/*.spec.js': ['webpack']
+      '../../src/**/*.js': ['webpack', 'sourcemap'],
+      'spec/**/*.spec.js': ['webpack', 'sourcemap']
     },
     browsers: ['PhantomJS'],
-    frameworks: ['jasmine'],
+    frameworks: ['jasmine', 'phantomjs-shim'],
     reporters: ['spec', 'coverage'],
     webpack: webpackTestConfig,
     webpackMiddleware: {
