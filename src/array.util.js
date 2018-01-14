@@ -6,6 +6,7 @@
  */
 
 class ArrayUtil {
+  // chunk the array into small pieces
   static chunk (array, size = 1) {
     let chunkedArray = []
     for (let i = 0; i < array.length; i = i + size) {
@@ -16,6 +17,20 @@ class ArrayUtil {
       chunkedArray.push(chunk)
     }
     return chunkedArray
+  }
+
+  // remove falsy values in the array
+  static compact (array) {
+    let compactedArray = array.filter(function (item) {
+      return Boolean(item)
+    })
+    return compactedArray
+  }
+
+  // concat multiple arrays
+  static concat (...arrays) {
+    let concatedArray = [].concat(...arrays)
+    return concatedArray
   }
 }
 

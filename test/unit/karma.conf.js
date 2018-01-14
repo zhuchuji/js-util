@@ -3,12 +3,10 @@ const webpackTestConfig = require('../../build/webpack.test.conf.js')
 module.exports = function (config) {
   config.set({
     files: [
-      '../../src/**/*.js',
-      'spec/**/*.spec.js'
+      './index.js'
     ],
     preprocessors: {
-      '../../src/**/*.js': ['webpack', 'sourcemap'],
-      'spec/**/*.spec.js': ['webpack', 'sourcemap']
+      './index.js': ['webpack', 'sourcemap']
     },
     browsers: ['PhantomJS'],
     frameworks: ['jasmine', 'phantomjs-shim'],
