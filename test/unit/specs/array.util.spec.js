@@ -48,4 +48,14 @@ describe('ArrayUtil: ', function () {
       expect(ArrayUtil.difference([1, 2, 1, 3], [1], [1, 2])).toEqual([3])
     })
   })
+
+  describe('drop', function () {
+    it('return the array dropping first element', function () {
+      expect(ArrayUtil.drop([1, 2, 3])).toEqual([2, 3])
+    })
+
+    it('return the array dropping all element if size greater than length', function () {
+      expect(ArrayUtil.drop([1, 2], 5)).toEqual([])
+    })
+  })
 })

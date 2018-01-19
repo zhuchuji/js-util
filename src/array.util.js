@@ -44,6 +44,12 @@ class ArrayUtil {
     }
     return diffArray
   }
+
+  static drop (array, size = 1) {
+    let droppedArray = [...array]
+    droppedArray.splice(0, size)
+    return droppedArray
+  }
 }
 
 export default ArrayUtil
