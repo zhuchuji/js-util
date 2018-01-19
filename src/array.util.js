@@ -32,6 +32,18 @@ class ArrayUtil {
     let concatedArray = [].concat(...arrays)
     return concatedArray
   }
+
+  static difference (array, ...comparedArray) {
+    let diffArray = [...array]
+    for (let sub of comparedArray) {
+      for (let subItem of sub) {
+        while (diffArray.indexOf(subItem) !== -1) {
+          diffArray.splice(diffArray.indexOf(subItem), 1)
+        }
+      }
+    }
+    return diffArray
+  }
 }
 
 export default ArrayUtil

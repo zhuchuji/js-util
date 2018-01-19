@@ -42,4 +42,10 @@ describe('ArrayUtil: ', function () {
       expect(ArrayUtil.concat([1], 2, [[3]])).toEqual([1, 2, [3]])
     })
   })
+
+  describe('difference', function () {
+    it('return the difference of the given array', function () {
+      expect(ArrayUtil.difference([1, 2, 1, 3], [1], [1, 2])).toEqual([3])
+    })
+  })
 })
